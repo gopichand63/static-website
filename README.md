@@ -1,2 +1,2 @@
 # static-website
-its all about a static wen page developed using complete angular
+its all about a static web page developed using complete angular
