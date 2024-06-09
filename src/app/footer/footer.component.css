@@ -1,0 +1,29 @@
+/* footer.component.css */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+  
+  h1, h4 {
+    color: #4a90e2;;
+  }
+  
+  ul {
+    font-family: Montserrat;
+    list-style: none;
+    padding: 0;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  img {
+    background-color: #4a90e2;;
+    border: 5px solid;
+    border-radius: 10px;
+  }

@@ -1,0 +1,71 @@
+
+<body>
+<h1 align="center" style="color: #4a90e2;"> <b> User Registration </b></h1>
+<form #registerForm="ngForm" >
+  <div class="form-container">
+    <table>
+      <tr>
+        <td>UserName</td>
+        <td><input type="text" name="userName" ngModel required /></td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td>
+          <select name="gender" ngModel required>
+            <option value="" selected>Select Gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+            <option value="Others">Others</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Address</td>
+        <td><input type="text" name="address" ngModel required /></td>
+      </tr>
+      <tr>
+        <td>Country</td>
+        <td>
+          <select name="country" ngModel required>
+            <option value="" selected>Select Country</option>
+            <option value="{{country.cca3}}" *ngFor="let country of countries">{{country.name.common}}</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>Mobile</td>
+        <td>
+          <input type="text" name="mobileNo" ngModel #mobileNo="ngModel" required pattern="[6789][0-9]{9}" />
+          <p *ngIf="mobileNo.errors?.['required'] && mobileNo.touched" class="error-text">Enter Phone Number</p>
+          <p *ngIf="mobileNo.errors?.['pattern'] && mobileNo.touched" class="error-text">Enter valid Phone Number</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Email-Id</td>
+        <td>
+          <input type="email" name="emailId" ngModel #emailId="ngModel" pattern="^[\w\.-]+@[a-zA-Z\d\.-]+\.[a-zA-Z]{2,}$" />
+          <p *ngIf="emailId.errors?.['pattern'] && emailId.touched" class="error-text">Enter a valid email</p>
+        </td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td>
+          <input type="password" name="password" ngModel #password="ngModel" required pattern="^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d@$!%*#?&]{8,}$" />
+          <p *ngIf="password.errors?.['required'] && password.touched" class="error-text">Enter password</p>
+          <p *ngIf="password.errors?.['pattern'] && password.touched" class="error-text">Password Must contain one Special Character,One UpperCase,One LowerCase,One Number, Min Length of 8</p>
+        </td>
+      </tr>
+     
+      <tr>
+        <td></td>
+        <td>
+          <button>Register</button>
+          Already User? <a routerLink="/login">SignIn</a>
+        </td>
+      </tr>
+    </table>
+  </div>
+</form>
+</body>
+
+

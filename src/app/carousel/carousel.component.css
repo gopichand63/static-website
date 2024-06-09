@@ -1,0 +1,18 @@
+.custom-carousel {
+    max-width: 100%; /* Adjust the maximum width as per your requirement */
+    /* height: 70vh; */
+    margin: auto; /* Center the carousel */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); /* Add shadow */
+}
+
+.custom-carousel-inner {
+    max-width: 100%; /* Ensure images are responsive */
+}
+
+.carousel-item {
+    overflow: hidden; /* Ensure images don't overflow the carousel */
+}
+.custom-img-height {
+    height: 400px; /* Set your desired height here */
+    object-fit: cover; /* Ensure the image covers the container without stretching */
+}

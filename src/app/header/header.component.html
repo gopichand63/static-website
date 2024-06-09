@@ -1,0 +1,34 @@
+<nav class="navbar navbar-expand-lg " data-bs-theme="dark">
+    <div class="container-fluid justify-content-end">
+      <a class="navbar-brand" href="#"><img src="https://svgsilh.com/svg/1059756.svg" height="50px" width="70px" style="fill: red;" alt=""></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item ms-3">
+            <a class="nav-link active" routerLink="" style="cursor: pointer; text-decoration: none;"><b>HOME</b>
+              <span class="visually-hidden">(current)</span>
+            </a>
+          <li class="nav-item ms-3">
+            <a class="nav-link active"  routerLink="aboutUs" style="cursor: pointer; text-decoration: none;"><b>ABOUT US</b>
+              <span class="visually-hidden">(current)</span>
+            </a>
+          </li>
+         
+
+          <li class="nav-item ms-3">
+            <a class="nav-link active"   [class.disabled]="loginStatus || adminStatus" style="cursor: pointer; text-decoration: none;" routerLink="login"  *ngIf ="!(loginStatus || adminStatus)" ><b>LOGIN</b></a>
+          </li>
+          
+        </ul>
+        <form class="d-flex">
+          <ul class="navbar-nav ">
+           <li class="nav-item ms-3">
+              <a class="nav-link active"  routerLink="logout"  style="cursor: pointer; text-decoration: none;"  *ngIf ="loginStatus || adminStatus"><b>LOGOUT</b></a>
+            </li>
+          </ul>
+        </form>
+      </div>
+    </div>
+  </nav>

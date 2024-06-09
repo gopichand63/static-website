@@ -1,0 +1,89 @@
+.contact{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.contact {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100px;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
+input{
+    width: 80%;
+    height: 40px;
+    margin: 12px;
+    align-items: center;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    background-color: aliceblue;
+}
+textarea{
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    margin: 12px;
+    height: 35%;
+}
+button {
+  padding: 5px 20px;
+  color: #00a6a0;
+  border-radius: 10px;
+  border: none;
+}
+.contactContainer{
+  border-radius: 5px;
+  display: flex;
+  width: fit-content;
+  height: 80vh;
+    box-shadow: rgb(176, 175, 175) 5px 5px 5px 5px;
+}
+.FirstContact {
+  border-radius: 5px;
+  width: 40vw;
+  padding: 20px;
+}
+.SecondContact {
+   
+  background-color: #00a6a0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  padding-left: 30px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  width: 40vw;
+}
+ ul li{
+  padding: 10px;
+  list-style-type: none;
+}
+@media only screen and (max-width: 600px) {
+  .contactContainer{
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: fit-content;
+    width: fit-content;
+  }
+  .FirstContact{
+  width:100%;;
+  }
+  .SecondContact{
+    width: 100%;
+  }
+}
+
+
+
+
+
+ 

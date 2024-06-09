@@ -1,0 +1,22 @@
+.custom-card {
+    border: 1px solid #ddd; /* Border style */
+    border-radius: 10px; /* Border radius */
+    box-shadow: 0 4px 8px rgba(238, 206, 206, 0.1); /* Background shadow */
+    transition: all 0.3s ease; /* Transition effect */
+    height: 100%; /* Ensure cards take up full height */
+}
+
+.custom-card:hover {
+    border-color: #4a90e2; /* Change border color on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Add shadow on hover */
+}
+
+.card-body {
+    text-align: center; /* Align text in the center */
+    height: 100%; /* Ensure card body takes up full height */
+}
+
+.card-text {
+    margin: 0; /* Remove default margin for text */
+    padding: 10px; /* Add padding to text */
+}

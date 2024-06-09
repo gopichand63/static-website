@@ -1,0 +1,32 @@
+
+
+<body>
+
+
+         <h1 class="text-center">Login Form</h1> <br>
+         <div class="container">
+            
+            <form #loginForm="ngForm" >
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                    <input type="email" class="form-control" name="emailId" #emailId="ngModel" ngModel required minlength="2" maxlength="40" placeholder="Email Address"/>
+                </div> <br/>
+                <div class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input type="password" class="form-control" name="password" #password="ngModel" ngModel required minlength="2" maxlength="20" placeholder="Password" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@#$%^&!])[A-Za-z\d@#$%^&!]{8,}"/>
+                </div> <br/>
+                <button class="btn btn-primary" [disabled]="loginForm.invalid">Login</button>
+                New User? <a routerLink="/register">Sign Up</a><br>
+                 <a routerLink="/forgotPassword">Forgot Password?</a><br>
+                for update user Infromation<a routerLink="/editPage"> update</a>
+                <div>
+                    <div *ngIf="emailId.errors?.['required'] && emailId.touched" style="color:red;">Please Enter Email Address</div>
+                    <div *ngIf="password.errors?.['required'] && password.touched" style="color:red;">Please Enter Password</div>
+                    <div *ngIf="emailId.errors?.['minlength'] && emailId.touched" style="color:red;">Please Enter at least 2 Characters for Email Address</div>
+                    <div *ngIf="password.errors?.['minlength'] && password.touched" style="color:red;">Please Enter at least 2 Characters for Password</div>
+                    <p class="error-msg" *ngIf="password.errors?.['required'] && password.touched">Please enter a password.</p>
+                    <p class="error-msg" *ngIf="password.errors?.['pattern'] && password.touched">Password must contain at least one special character, one uppercase letter, one lowercase letter, one number, and be at least 8 characters long.</p>
+                </div>
+            </form>
+        </div>
+    </body>     
